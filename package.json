@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "dotenv": "^6.2.0",
     "eslint": "^5.12.1",
     "eslint-config-apptension-react": "^0.0.10",
     "eslint-plugin-chai-friendly": "^0.4.1",
@@ -37,6 +38,9 @@
     "redux-saga": "^0.16.2",
     "reduxsauce": "^1.0.1",
     "reselect": "^4.0.0"
+  },
+  "peerDependencies": {
+    "webpack": "4.x"
   },
   "husky": {
     "hooks": {
