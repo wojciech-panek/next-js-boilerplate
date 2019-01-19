@@ -1,0 +1,31 @@
+{
+  "name": "next-playground",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Wojciech Panek",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "immutable": "^4.0.0-rc.12",
+    "next": "^7.0.2",
+    "next-redux-saga": "^3.0.0",
+    "next-redux-wrapper": "^2.1.0",
+    "next-routes": "^1.4.2",
+    "prop-types": "^15.6.2",
+    "ramda": "^0.26.1",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-intl": "^2.8.0",
+    "react-redux": "^6.0.0",
+    "redux": "^4.0.1",
+    "redux-immutable": "^4.0.0",
+    "redux-saga": "^0.16.2",
+    "reduxsauce": "^1.0.1",
+    "reselect": "^4.0.0"
+  }
+}
