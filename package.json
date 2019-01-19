@@ -6,12 +6,13 @@
   "license": "MIT",
   "scripts": {
     "dev": "node server.js",
-    "build": "next build",
+    "build": "next build ./src",
     "start": "NODE_ENV=production node server.js",
     "lint": "eslint ."
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "babel-plugin-inline-react-svg": "^1.0.1",
     "dotenv": "^6.2.0",
     "eslint": "^5.12.1",
     "eslint-config-apptension-react": "^0.0.10",
@@ -21,6 +22,7 @@
     "immutable": "^4.0.0-rc.12",
     "lint-staged": "^8.1.0",
     "next": "^7.0.2",
+    "next-images": "^1.0.4",
     "next-redux-saga": "^3.0.0",
     "next-redux-wrapper": "^2.1.0",
     "next-routes": "^1.4.2",
