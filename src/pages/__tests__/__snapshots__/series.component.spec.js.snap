@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Series: Page should render Series root 1`] = `
+exports[`Series: Page should render correctly 1`] = `
 <Series
   router={
     Object {

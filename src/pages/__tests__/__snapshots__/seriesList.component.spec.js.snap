@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SeriesList: Page should render SeriesList root 1`] = `
+exports[`SeriesList: Page should render correctly 1`] = `
 <div>
   Series List
 </div>

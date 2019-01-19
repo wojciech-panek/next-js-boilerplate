@@ -15,7 +15,7 @@ describe('Home: Page', () => {
     <Home {...defaultProps} {...props} />
   );
 
-  it('should render Home root', () => {
+  it('should render correctly', () => {
     const wrapper = shallow(component());
     global.expect(wrapper).toMatchSnapshot();
   });

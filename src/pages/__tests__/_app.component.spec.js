@@ -12,7 +12,7 @@ describe('App: Page', () => {
     <App {...defaultProps} {...props} />
   );
 
-  it('should render App root', () => {
+  it('should render correctly', () => {
     const wrapper = shallow(component());
     global.expect(wrapper).toMatchSnapshot();
   });

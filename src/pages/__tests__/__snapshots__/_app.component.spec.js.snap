@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App: Page should render App root 1`] = `
+exports[`App: Page should render correctly 1`] = `
 <CustomApp
   store={
     Object {

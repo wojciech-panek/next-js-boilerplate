@@ -13,7 +13,7 @@ describe('Series: Page', () => {
     <Series {...defaultProps} {...props} />
   );
 
-  it('should render Series root', () => {
+  it('should render correctly', () => {
     const wrapper = shallow(component());
     global.expect(wrapper).toMatchSnapshot();
   });
