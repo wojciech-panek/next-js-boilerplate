@@ -6,7 +6,7 @@ const ramda = require('ramda');
 module.exports = ramda.compose(
   withImages,
 )({
-  distDir: '../dist',
+  distDir: '../build',
   webpack(config) {
     config.plugins.push(new webpack.EnvironmentPlugin(localEnv));
 

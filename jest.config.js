@@ -21,7 +21,7 @@ module.exports = {
     '^.+\\.module\\.(css|sass|scss)$',
   ],
   watchPathIgnorePatterns: [
-    'dist',
+    'build',
   ],
   moduleNameMapper: {
     '^react-native$': 'react-native-web',
