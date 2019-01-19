@@ -1,16 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Home: Component should render correctly 1`] = `
-<div>
+<homestyles__Container>
+  <SideEffect(Head)>
+    <title
+      key="title"
+    >
+      Homepage
+    </title>
+  </SideEffect(Head)>
   Homepage
-  <img
+  <homestyles__Img
     alt=""
     src="logo.png"
-    style={
-      Object {
-        "width": "100px",
-      }
-    }
   />
   <LogoSVG
     style={
@@ -21,5 +23,5 @@ exports[`Home: Component should render correctly 1`] = `
     viewBox="0 0 106 134"
     xmlns="http://www.w3.org/2000/svg"
   />
-</div>
+</homestyles__Container>
 `;

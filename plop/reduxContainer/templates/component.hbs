@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
+import { Container } from './{{ camelCase name }}.styles';
+
 
 export class {{ pascalCase name }} extends PureComponent {
   static propTypes = {
@@ -8,9 +10,9 @@ export class {{ pascalCase name }} extends PureComponent {
 
   render() {
     return (
-      <div>
+      <Container>
         {{ pascalCase name }} component
-      </div>
+      </Container>
     );
   }
 }
