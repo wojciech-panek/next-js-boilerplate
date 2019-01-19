@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App: Page should render App root 1`] = `
+<CustomApp
+  store={
+    Object {
+      "dispatch": [Function],
+      "execSagaTasks": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "runSaga": [Function],
+      "saga": Object {
+        "@@redux-saga/TASK": true,
+        "cancel": [Function],
+        "cont": undefined,
+        "done": Promise {},
+        "error": [Function],
+        "id": 1,
+        "isAborted": [Function],
+        "isCancelled": [Function],
+        "isRunning": [Function],
+        "joiners": Array [],
+        "name": "rootSaga",
+        "result": [Function],
+        "setContext": [Function],
+      },
+      "stopSaga": [Function],
+      "subscribe": [Function],
+      Symbol(Symbol.observable): [Function],
+    }
+  }
+/>
+`;

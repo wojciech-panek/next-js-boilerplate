@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SeriesList: Page should render SeriesList root 1`] = `
+<div>
+  Series List
+</div>
+`;

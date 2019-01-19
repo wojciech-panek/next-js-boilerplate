@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home: Component should render Home root 1`] = `
+<div>
+  Homepage
+  <img
+    alt=""
+    src="logo.png"
+    style={
+      Object {
+        "width": "100px",
+      }
+    }
+  />
+  <LogoSVG
+    style={
+      Object {
+        "width": "100px",
+      }
+    }
+    viewBox="0 0 106 134"
+    xmlns="http://www.w3.org/2000/svg"
+  />
+</div>
+`;

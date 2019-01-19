@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Series: Page should render Series root 1`] = `
+<Series
+  router={
+    Object {
+      "query": Object {
+        "id": "test-id",
+      },
+    }
+  }
+/>
+`;
