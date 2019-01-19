@@ -1,7 +1,6 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { createStructuredSelector } from 'reselect';
-import { injectIntl } from 'react-intl';
 import { compose } from 'ramda';
 
 import { Home } from './home.component';

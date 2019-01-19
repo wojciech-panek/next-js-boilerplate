@@ -5,5 +5,5 @@ const handler = routes.getRequestHandler(app);
 
 const express = require('express');
 app.prepare().then(() => {
-  express().use(handler).listen(3000)
+  express().use(handler).listen(3000);
 });

@@ -1,12 +1,17 @@
 import React, { PureComponent } from 'react';
-import { withRouter } from 'next/router'
+import PropTypes from 'prop-types';
+import { withRouter } from 'next/router';
 
 
 class Series extends PureComponent {
-  render () {
+  static propTypes = {
+    router: PropTypes.object.isRequired,
+  };
+
+  render() {
     return (
       <div>Series: {this.props.router.query.id}</div>
-    )
+    );
   }
 }
 

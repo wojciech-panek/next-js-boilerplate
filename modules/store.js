@@ -14,21 +14,22 @@ export default function configureStore(initialState = {}) {
 
   const enhancers = [];
 
-  // if (window.__REDUX_DEVTOOLS_EXTENSION__) {
-  //   enhancers.push(window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
-  // } else if (process.env.NODE_ENV === 'development') {
-  //   const { persistState } = require('redux-devtools');
-  //
-  //   const getDebugSessionKey = () => {
-  //     const matches = window.location.href.match(/[?&]debug_session=([^&#]+)\b/);
-  //     return (matches && matches.length > 0) ? matches[1] : null;
-  //   };
-  //
-  //   Array.prototype.push.apply(enhancers, [
-  //     require('../shared/utils/devtools.component').default.instrument(),
-  //     persistState(getDebugSessionKey(), (state) => fromJS(state)),
-  //   ]);
-  // }
+  if (typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION__) {
+    enhancers.push(window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+  } else if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
+    const { persistState } = require('redux-devtools');
+    const devtools = require('../shared/utils/devtools');
+
+    const getDebugSessionKey = () => {
+      const matches = window.location.href.match(/[?&]debug_session=([^&#]+)\b/);
+      return (matches && matches.length > 0) ? matches[1] : null;
+    };
+
+    Array.prototype.push.apply(enhancers, [
+      devtools.Component.instrument(),
+      persistState(getDebugSessionKey(), (state) => fromJS(state)),
+    ]);
+  }
 
   const store = createStore(
     createReducer(),
@@ -66,6 +67,11 @@ export default function configureStore(initialState = {}) {
   };
 
   store.runSaga();
+
+  if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development' && !window.__REDUX_DEVTOOLS_EXTENSION__) {
+    const devtools = require('../shared/utils/devtools');
+    devtools.appendToDOM(store);
+  }
 
   return store;
 }
