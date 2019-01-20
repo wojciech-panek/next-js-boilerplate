@@ -8,6 +8,44 @@ exports[`Document: Page should render correctly 1`] = `
       key="viewport"
       name="viewport"
     />
+    <link
+      href="/static/icons/favicon.ico"
+      rel="shortcut icon"
+    />
+    <link
+      href="/static/icons/apple-touch-icon.png"
+      rel="apple-touch-icon"
+      sizes="180x180"
+    />
+    <link
+      href="/static/icons/favicon-32x32.png"
+      rel="icon"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      href="/static/icons/favicon-16x16.png"
+      rel="icon"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link
+      color="#5bbad5"
+      href="/static/icons/safari-pinned-tab.svg"
+      rel="mask-icon"
+    />
+    <meta
+      content="#ffffff"
+      name="theme-color"
+    />
+    <meta
+      content="yes"
+      name="mobile-web-app-capable"
+    />
+    <link
+      href="/static/manifest.json"
+      rel="manifest"
+    />
   </Head>
   <body>
     <Main />
