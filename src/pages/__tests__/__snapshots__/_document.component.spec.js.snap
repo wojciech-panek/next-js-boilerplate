@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Document: Page should render correctly 1`] = `
+<html>
+  <Head>
+    <meta
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      key="viewport"
+      name="viewport"
+    />
+  </Head>
+  <body>
+    <Main />
+    <NextScript />
+  </body>
+</html>
+`;
