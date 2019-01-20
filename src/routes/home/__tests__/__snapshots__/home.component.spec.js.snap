@@ -9,11 +9,13 @@ exports[`Home: Component should render correctly 1`] = `
   >
     <Component />
   </FormattedMessage>
-  <FormattedMessage
-    defaultMessage="Hello World!"
-    id="home.welcome"
-    values={Object {}}
-  />
+  <typography__H1>
+    <FormattedMessage
+      defaultMessage="Hello World!"
+      id="home.welcome"
+      values={Object {}}
+    />
+  </typography__H1>
   <homestyles__IconsContainer>
     Example images usage:
     <homestyles__Img

@@ -3,6 +3,7 @@ import { compose } from 'ramda';
 
 import withIntl from '../../lib/withIntl';
 import { Container } from './header.styles';
+import { Paragraph } from '../../../shared/theme/typography';
 
 
 export class Header extends PureComponent {
@@ -13,7 +14,7 @@ export class Header extends PureComponent {
   render() {
     return (
       <Container>
-        Header
+        <Paragraph>Header</Paragraph>
       </Container>
     );
   }

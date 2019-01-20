@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Error: Page should render correctly with statusCode 1`] = `
-<p>
+<typography__Paragraph>
   An error 400 occurred on server
-</p>
+</typography__Paragraph>
 `;
 
 exports[`Error: Page should render correctly without statusCode 1`] = `
-<p>
+<typography__Paragraph>
   An error occurred on client
-</p>
+</typography__Paragraph>
 `;

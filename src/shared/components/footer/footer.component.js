@@ -3,6 +3,7 @@ import { compose } from 'ramda';
 
 import withIntl from '../../lib/withIntl';
 import { Container } from './footer.styles';
+import { Paragraph } from '../../../shared/theme/typography';
 
 
 export class Footer extends PureComponent {
@@ -13,7 +14,7 @@ export class Footer extends PureComponent {
   render() {
     return (
       <Container>
-        Footer
+        <Paragraph>Footer</Paragraph>
       </Container>
     );
   }

@@ -2,6 +2,8 @@
 
 exports[`Footer: Component should render correctly 1`] = `
 <footerstyles__Container>
-  Footer
+  <typography__Paragraph>
+    Footer
+  </typography__Paragraph>
 </footerstyles__Container>
 `;

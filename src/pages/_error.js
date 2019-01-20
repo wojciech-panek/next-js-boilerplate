@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { compose } from 'ramda';
 
 import withIntl from '../shared/lib/withIntl';
+import { Paragraph } from '../shared/theme/typography';
 
 
 export class Error extends React.Component {
@@ -22,11 +23,11 @@ export class Error extends React.Component {
 
   render() {
     return (
-      <p>
+      <Paragraph>
         {this.props.statusCode
           ? `An error ${this.props.statusCode} occurred on server`
           : 'An error occurred on client'}
-      </p>
+      </Paragraph>
     );
   }
 }

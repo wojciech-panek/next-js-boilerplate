@@ -2,6 +2,8 @@
 
 exports[`Header: Component should render correctly 1`] = `
 <headerstyles__Container>
-  Header
+  <typography__Paragraph>
+    Header
+  </typography__Paragraph>
 </headerstyles__Container>
 `;

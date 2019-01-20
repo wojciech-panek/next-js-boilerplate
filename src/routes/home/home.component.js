@@ -4,6 +4,7 @@ import { FormattedMessage } from 'react-intl';
 
 import LogoPNG from '../../images/logo.png';
 import LogoSVG from '../../images/icons/logo.svg';
+import { H1 } from '../../shared/theme/typography';
 import { Container, IconsContainer, Img } from './home.styles';
 import messages from './home.messages';
 
@@ -24,9 +25,12 @@ export class Home extends PureComponent {
           )}
         </FormattedMessage>
 
-        <FormattedMessage {...messages.welcome} />
+        <H1>
+          <FormattedMessage {...messages.welcome} />
+        </H1>
 
         <IconsContainer>
+
           Example images usage:
           <Img src={LogoPNG} alt="" />
           <LogoSVG style={{ width: '25px' }} />

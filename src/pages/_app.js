@@ -12,6 +12,7 @@ import { LocalesActions } from '../modules/locales';
 import { LanguageSwitcher } from '../shared/components/languageSwitcher';
 import { Footer } from '../shared/components/footer';
 import { Header } from '../shared/components/header';
+import { GlobalStyle } from '../shared/theme/global';
 import { translationMessages, DEFAULT_LOCALE } from '../i18n';
 
 
@@ -51,6 +52,8 @@ class App extends NextApp {
               <LanguageSwitcher />
 
               <Footer />
+
+              <GlobalStyle />
             </Fragment>
           </IntlProvider>
         </Provider>
