@@ -9,7 +9,16 @@ export const Container = styled.div`
   text-align: center;
 `;
 
+export const IconsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+`;
+
 export const Img = styled.img`
-  width: 100px;
+  width: 30px;
 `;
 

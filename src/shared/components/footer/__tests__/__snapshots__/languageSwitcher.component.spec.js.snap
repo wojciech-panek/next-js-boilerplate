@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer: Component should render correctly 1`] = `
+<footerstyles__Container>
+  Footer
+</footerstyles__Container>
+`;

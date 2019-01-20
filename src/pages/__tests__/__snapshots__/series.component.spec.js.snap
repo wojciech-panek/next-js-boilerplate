@@ -1,13 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Series: Page should render correctly 1`] = `
-<Series
-  router={
-    Object {
-      "query": Object {
-        "id": "test-id",
-      },
-    }
-  }
-/>
+<div>
+  Series: 
+  test-id
+</div>
 `;

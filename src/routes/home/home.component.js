@@ -1,9 +1,11 @@
 import React, { PureComponent } from 'react';
 import Head from 'next/head';
+import { FormattedMessage } from 'react-intl';
 
 import LogoPNG from '../../images/logo.png';
 import LogoSVG from '../../images/icons/logo.svg';
-import { Container, Img } from './home.styles';
+import { Container, IconsContainer, Img } from './home.styles';
+import messages from './home.messages';
 
 
 export class Home extends PureComponent {
@@ -14,13 +16,21 @@ export class Home extends PureComponent {
   render() {
     return (
       <Container>
-        <Head>
-          <title key="title">Homepage</title>
-        </Head>
-        Homepage
+        <FormattedMessage {...messages.pageTitle}>
+          {pageTitle => (
+            <Head>
+              <title key="title">{ pageTitle }</title>
+            </Head>
+          )}
+        </FormattedMessage>
 
-        <Img src={LogoPNG} alt="" />
-        <LogoSVG style={{ width: '100px' }} />
+        <FormattedMessage {...messages.welcome} />
+
+        <IconsContainer>
+          Example images usage:
+          <Img src={LogoPNG} alt="" />
+          <LogoSVG style={{ width: '25px' }} />
+        </IconsContainer>
       </Container>
     );
   }

@@ -1,9 +1,12 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'next/router';
+import { compose } from 'ramda';
+
+import withIntl from '../shared/lib/withIntl';
 
 
-class Series extends PureComponent {
+export class SeriesPage extends PureComponent {
   static propTypes = {
     router: PropTypes.object.isRequired,
   };
@@ -15,4 +18,7 @@ class Series extends PureComponent {
   }
 }
 
-export default withRouter(Series);
+export default compose(
+  withIntl,
+  withRouter,
+)(SeriesPage);

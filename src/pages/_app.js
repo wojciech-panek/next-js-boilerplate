@@ -1,33 +1,58 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import App, { Container } from 'next/app';
 import withRedux from 'next-redux-wrapper';
 import { compose } from 'ramda';
 import { Provider } from 'react-redux';
 import { fromJS } from 'immutable';
+import { IntlProvider } from 'react-intl';
+import { withRouter } from 'next/router';
 
 import configureStore from '../modules/store';
+import { LocalesActions } from '../modules/locales';
+import { LanguageSwitcher } from '../shared/components/languageSwitcher';
+import { Footer } from '../shared/components/footer';
+import { Header } from '../shared/components/header';
+import { translationMessages, DEFAULT_LOCALE } from '../i18n';
 
 
 class CustomApp extends App {
   static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
+    const initialNow = Date.now();
+    const locale = ctx.query.lang || DEFAULT_LOCALE;
+
+    await ctx.store.execSagaTasks(ctx.isServer, (dispatch) => {
+      dispatch(LocalesActions.setLanguage(locale));
+    });
 
     if (Component.getInitialProps) {
       pageProps = await Component.getInitialProps(ctx);
     }
 
-    return { pageProps };
+    return { pageProps, initialNow, locale };
   }
 
   render() {
-    const { Component, pageProps, store } = this.props;
+    const { Component, pageProps, initialNow, locale, store } = this.props;
 
     return (
       <Container>
         <Provider store={store}>
-          Header
-          <Component {...pageProps} />
-          Footer
+          <IntlProvider
+            locale={locale}
+            messages={translationMessages[locale]}
+            initialNow={initialNow}
+          >
+            <Fragment>
+              <Header />
+
+              <Component {...pageProps} />
+
+              <LanguageSwitcher />
+
+              <Footer />
+            </Fragment>
+          </IntlProvider>
         </Provider>
       </Container>
     );
@@ -35,6 +60,7 @@ class CustomApp extends App {
 }
 
 export default compose(
+  withRouter,
   withRedux(configureStore, {
     serializeState: (state) => state.toJS(),
     deserializeState: (state) => fromJS(state),

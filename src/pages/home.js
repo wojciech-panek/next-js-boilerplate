@@ -1,10 +1,12 @@
 import React, { PureComponent } from 'react';
+import { compose } from 'ramda';
 
+import withIntl from '../shared/lib/withIntl';
 import { Home } from '../routes/home';
 import { MaintainersActions } from '../modules/maintainers/maintainers.redux';
 
 
-export default class HomePage extends PureComponent {
+export class HomePage extends PureComponent {
   static async getInitialProps({ isServer, store }) {
     await store.execSagaTasks(isServer, (dispatch) => {
       dispatch(MaintainersActions.fetch());
@@ -17,3 +19,7 @@ export default class HomePage extends PureComponent {
     return <Home />;
   }
 }
+
+export default compose(
+  withIntl,
+)(HomePage);

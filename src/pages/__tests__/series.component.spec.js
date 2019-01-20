@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import Series from '../series';
+import { SeriesPage } from '../series';
 
 
 describe('Series: Page', () => {
@@ -10,7 +10,7 @@ describe('Series: Page', () => {
   };
 
   const component = (props) => (
-    <Series {...defaultProps} {...props} />
+    <SeriesPage {...defaultProps} {...props} />
   );
 
   it('should render correctly', () => {

@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LanguageSwitcher: Component should render correctly 1`] = `
+<languageSwitcherstyles__Container>
+  <languageSwitcherstyles__Select
+    onChange={[Function]}
+    value="en"
+  >
+    <option
+      key="0"
+      value="en"
+    >
+      en
+    </option>
+    <option
+      key="1"
+      value="pl"
+    >
+      pl
+    </option>
+  </languageSwitcherstyles__Select>
+</languageSwitcherstyles__Container>
+`;

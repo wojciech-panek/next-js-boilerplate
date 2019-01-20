@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import { spy } from 'sinon';
 import { expect } from 'chai';
 
-import Home from '../home';
+import { HomePage } from '../home';
 import { MaintainersActions } from '../../modules/maintainers/maintainers.redux';
 
 
@@ -12,7 +12,7 @@ describe('Home: Page', () => {
   };
 
   const component = (props) => (
-    <Home {...defaultProps} {...props} />
+    <HomePage {...defaultProps} {...props} />
   );
 
   it('should render correctly', () => {
@@ -24,7 +24,7 @@ describe('Home: Page', () => {
     const dispatch = spy();
     const store = global.utils.prepareInitialPropsStore(dispatch);
 
-    await Home.getInitialProps({ store });
+    await HomePage.getInitialProps({ store });
 
     expect(dispatch).to.have.been.calledOnce;
     expect(dispatch).to.have.been.calledWith(MaintainersActions.fetch());

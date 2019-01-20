@@ -1,15 +1,15 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { SeriesListPage } from '../seriesList';
+import { Header } from '../header.component';
 
 
-describe('SeriesList: Page', () => {
+describe('Header: Component', () => {
   const defaultProps = {
   };
 
   const component = (props) => (
-    <SeriesListPage {...defaultProps} {...props} />
+    <Header {...defaultProps} {...props} />
   );
 
   it('should render correctly', () => {
