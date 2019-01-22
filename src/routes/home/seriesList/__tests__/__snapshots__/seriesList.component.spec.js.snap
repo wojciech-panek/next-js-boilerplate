@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SeriesList: Component should render correctly 1`] = `
+<seriesListstyles__Container>
+  <typography__H2>
+    <FormattedMessage
+      defaultMessage="Series List"
+      id="home.seriesList.title"
+      values={Object {}}
+    />
+    :
+  </typography__H2>
+  <seriesListstyles__ItemsContainer>
+    <InjectIntl(withRouter(Connect(Link)))
+      key="1"
+      to="/series/1"
+    >
+      <a>
+        series 1
+         [
+        <FormattedMessage
+          defaultMessage="Season"
+          id="home.seriesList.season"
+          values={Object {}}
+        />
+        : 
+        1
+        ]
+      </a>
+    </InjectIntl(withRouter(Connect(Link)))>
+    <InjectIntl(withRouter(Connect(Link)))
+      key="2"
+      to="/series/2"
+    >
+      <a>
+        series 2
+         [
+        <FormattedMessage
+          defaultMessage="Season"
+          id="home.seriesList.season"
+          values={Object {}}
+        />
+        : 
+        1
+        ]
+      </a>
+    </InjectIntl(withRouter(Connect(Link)))>
+    <InjectIntl(withRouter(Connect(Link)))
+      key="3"
+      to="/series/3"
+    >
+      <a>
+        series 3
+         [
+        <FormattedMessage
+          defaultMessage="Season"
+          id="home.seriesList.season"
+          values={Object {}}
+        />
+        : 
+        1
+        ]
+      </a>
+    </InjectIntl(withRouter(Connect(Link)))>
+  </seriesListstyles__ItemsContainer>
+</seriesListstyles__Container>
+`;

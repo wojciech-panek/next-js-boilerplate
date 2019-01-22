@@ -1,14 +1,16 @@
 import { all, fork } from 'redux-saga/effects';
 
 import reportError from '../shared/utils/reportError';
-import { watchMaintainers } from './maintainers/maintainers.sagas';
+import { watchSeries } from './series/series.sagas';
+import { watchEpisodes } from './episodes/episodes.sagas';
 //<-- IMPORT MODULE SAGA -->
 
 
 export default function* rootSaga() {
   try {
     yield all([
-      fork(watchMaintainers),
+      fork(watchSeries),
+      fork(watchEpisodes),
       //<-- INJECT MODULE SAGA -->
     ]);
   } catch (e) {

@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Episodes: Component should render <Loader /> when data does not match 1`] = `<InjectIntl(Loader) />`;
+
+exports[`Episodes: Component should render <Loader /> when data is not provided 1`] = `<InjectIntl(Loader) />`;
+
+exports[`Episodes: Component should render correctly when data is provided 1`] = `
+<episodesstyles__Container>
+  <FormattedMessage
+    defaultMessage="Episode"
+    id="episodes.pageTitle"
+    values={Object {}}
+  >
+    <Component />
+  </FormattedMessage>
+  <typography__H2>
+    example episode title
+  </typography__H2>
+  <InjectIntl(withRouter(Connect(Link)))
+    to="/series/1"
+  >
+    <a>
+      <FormattedMessage
+        defaultMessage="Back"
+        id="episodes.back"
+        values={Object {}}
+      />
+    </a>
+  </InjectIntl(withRouter(Connect(Link)))>
+</episodesstyles__Container>
+`;

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loader: Component should render correctly 1`] = `
+<loaderstyles__Container>
+  Loading...
+</loaderstyles__Container>
+`;

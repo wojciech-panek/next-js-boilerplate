@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link: Component should render correctly for DEFAULT_LANGUAGE link 1`] = `
+<LinkRoutes
+  to="/example/nested/url"
+>
+  link
+</LinkRoutes>
+`;
+
+exports[`Link: Component should render correctly for non DEFAULT_LANGUAGE link 1`] = `
+<LinkRoutes
+  to="/language/example/nested/url"
+>
+  link
+</LinkRoutes>
+`;

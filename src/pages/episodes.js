@@ -3,22 +3,22 @@ import { compose } from 'ramda';
 import { withRouter } from 'next/router';
 
 import withIntl from '../shared/lib/withIntl';
-import { Series } from '../routes/series';
-import { SeriesActions } from '../modules/series/series.redux';
+import { Episodes } from '../routes/episodes';
+import { EpisodesActions } from '../modules/episodes';
 
 
-export class SeriesPage extends PureComponent {
+export class EpisodesPage extends PureComponent {
   static fetchData(dispatch, query) {
-    dispatch(SeriesActions.fetchSingle(parseInt(query.id, 10)));
+    dispatch(EpisodesActions.fetchSingle(parseInt(query.id, 10)));
   }
 
   static async getInitialProps({ isServer, store, query }) {
     if (isServer) {
       await store.execSagaTasks(isServer, (dispatch) => {
-        SeriesPage.fetchData(dispatch, query);
+        EpisodesPage.fetchData(dispatch, query);
       });
     } else {
-      SeriesPage.fetchData(store.dispatch, query);
+      EpisodesPage.fetchData(store.dispatch, query);
     }
 
     return {};
@@ -26,7 +26,7 @@ export class SeriesPage extends PureComponent {
 
   render() {
     return (
-      <Series />
+      <Episodes />
     );
   }
 }
@@ -34,4 +34,4 @@ export class SeriesPage extends PureComponent {
 export default compose(
   withIntl,
   withRouter,
-)(SeriesPage);
+)(EpisodesPage);

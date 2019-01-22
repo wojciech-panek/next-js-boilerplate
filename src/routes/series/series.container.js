@@ -5,19 +5,18 @@ import { compose } from 'ramda';
 import { withRouter } from 'next/router';
 
 import withIntl from '../../shared/lib/withIntl';
-import { Home } from './home.component';
-import { selectSeriesItems } from '../../modules/series';
+import { selectSeriesData } from '../../modules/series';
+import { Series } from './series.component';
 
 
 const mapStateToProps = createStructuredSelector({
-  series: selectSeriesItems,
+  data: selectSeriesData,
 });
 
-export const mapDispatchToProps = (dispatch) => bindActionCreators({
-}, dispatch);
+export const mapDispatchToProps = (dispatch) => bindActionCreators({}, dispatch);
 
 export default compose(
   withIntl,
   withRouter,
   connect(mapStateToProps, mapDispatchToProps),
-)(Home);
+)(Series);

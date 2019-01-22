@@ -9,5 +9,5 @@ if (appLocalesWithoutDefault.length) {
 
 index
   .add('home', `${langParam}`)
-  .add('seriesList', `${langParam}/series`)
-  .add('series', `${langParam}/series`);
+  .add('series', `${langParam}/series/:id`)
+  .add('episodes', `${langParam}/episodes/:id`);

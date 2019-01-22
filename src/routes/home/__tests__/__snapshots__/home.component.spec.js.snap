@@ -1,6 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Home: Component should render correctly 1`] = `
+exports[`Home: Component should render <Loader /> when data is not provided 1`] = `<InjectIntl(Loader) />`;
+
+exports[`Home: Component should render correctly  when data is provided 1`] = `
 <homestyles__Container>
   <FormattedMessage
     defaultMessage="Homepage"
@@ -32,5 +34,6 @@ exports[`Home: Component should render correctly 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     />
   </homestyles__IconsContainer>
+  <InjectIntl(withRouter(Connect(SeriesList))) />
 </homestyles__Container>
 `;

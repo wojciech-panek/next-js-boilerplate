@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Series: Component should render <Loader /> when data does not match 1`] = `<InjectIntl(Loader) />`;
+
+exports[`Series: Component should render <Loader /> when data is not provided 1`] = `<InjectIntl(Loader) />`;
+
+exports[`Series: Component should render correctly when data is provided 1`] = `
+<seriesstyles__Container>
+  <FormattedMessage
+    defaultMessage="Series"
+    id="series.pageTitle"
+    values={Object {}}
+  >
+    <Component />
+  </FormattedMessage>
+  <typography__H2>
+    example series title
+     [
+    <FormattedMessage
+      defaultMessage="Season"
+      id="series.season"
+      values={Object {}}
+    />
+    : 
+    ]
+  </typography__H2>
+  <typography__H4>
+    <FormattedMessage
+      defaultMessage="Episodes"
+      id="series.episodes"
+      values={Object {}}
+    />
+    :
+  </typography__H4>
+  <seriesstyles__EpisodesContainer>
+    <InjectIntl(withRouter(Connect(Link)))
+      key="1"
+      to="/episodes/1"
+    >
+      <a>
+        [
+        1
+        ] 
+        example episode title 1
+      </a>
+    </InjectIntl(withRouter(Connect(Link)))>
+    <InjectIntl(withRouter(Connect(Link)))
+      key="2"
+      to="/episodes/2"
+    >
+      <a>
+        [
+        2
+        ] 
+        example episode title 2
+      </a>
+    </InjectIntl(withRouter(Connect(Link)))>
+    <InjectIntl(withRouter(Connect(Link)))
+      key="3"
+      to="/episodes/3"
+    >
+      <a>
+        [
+        3
+        ] 
+        example episode title 3
+      </a>
+    </InjectIntl(withRouter(Connect(Link)))>
+  </seriesstyles__EpisodesContainer>
+  <InjectIntl(withRouter(Connect(Link)))
+    to="/"
+  >
+    <a>
+      <FormattedMessage
+        defaultMessage="Back"
+        id="series.back"
+        values={Object {}}
+      />
+    </a>
+  </InjectIntl(withRouter(Connect(Link)))>
+</seriesstyles__Container>
+`;

@@ -1,4 +1,12 @@
 {
+  "episodes.back": "",
+  "episodes.pageTitle": "",
   "home.pageTitle": "Strona główna",
-  "home.welcome": "Witamy!"
+  "home.seriesList.season": "",
+  "home.seriesList.title": "",
+  "home.welcome": "Witamy!",
+  "series.back": "",
+  "series.episodes": "",
+  "series.pageTitle": "",
+  "series.season": ""
 }
